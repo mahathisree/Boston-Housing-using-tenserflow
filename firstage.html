@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="project.css">
+<style>
+th
+{
+text-align:center;
+color:grey;
+}
+td
+{
+text-align:center;
+color:black;
+}
+#Contact us
+{
+background-color:black;
+}
+</style>
+<body>
+
+<div class="w3-container">
+</div>
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="openCity('Home')">Home</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Login')">Login</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('About us')">About us</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Contact us',this,'black')">Contact us</button>
+</div>
+
+<div id="Home" class="w3-container city">
+ <img src="slide981.jpg">
+</div>
+
+<div id="Login" class="w3-container city" style="display:none">
+<img src="logimm.jpg" align="right">
+<div class="b2">
+<form action="logcheck.jsp" method='post'>
+<p>EmailId:
+<input type="text" name="id" placeholder="Enter EmailId" required></p>
+<p>Password:
+<input type="password" name="pass" placeholder="Enter Password" required></p><br>
+<input type="submit" name="" value="Login"><br><br>
+<a href="forgot.html">Forgot Password?</a><br>
+New User?<a href="reg.html">
+Register
+</a>
+</form>
+</div>
+</div>
+
+<div id="About us" class="w3-container city" style="display:none">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Contact us" class="w3-container city" style="display:none" color="black">
+
+  <table style="width:100%">
+  <tr>
+    <th>HELP</th>
+    <th>POLICY</th> 
+    <th>SOCIAL</th>
+<th>ADDRESS</th>
+
+    <th>MAIL US</th>
+  </tr>
+  <tr>
+    <td>payments</td>
+    <td>Return policy</td>
+    <td>Facebook</td>
+     <td>FrendForTrend Internet Private Limited</td>
+<td>supercinqspardha@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Shipping</td>
+    <td>Terms of use</td>
+    <td>Twitter</td>
+     <td>Srkr engineering College</td>
+<td>frendfortrendspardha@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Cancellation and Returns</td>
+    <td>Security</td>
+    <td>Youtube</td>
+    <td>Chinnamiram</td>
+  </tr>
+<tr>
+    <td>Returns</td>
+    <td>Privacy</td>
+    <td>    </td>
+     <td> Bhimavaram</td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+</body>
+</html>
